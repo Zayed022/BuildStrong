@@ -41,7 +41,7 @@ const Navbar = () => {
   <img
     src="/SKlogo.png" // ⬅️ Place your logo file inside the public folder
     alt="S.K Reality Logo"
-    className="w-8 h-8 object-contain" // Adjust size as needed
+    className="w-10 h-10 object-contain" // Adjust size as needed
   />
   S.K Reality
 </NavLink>

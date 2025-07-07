@@ -1,27 +1,27 @@
 export const projects = [
   {
     title: "Modern Villa Construction",
-    image: "/assets/projects/villa.jpg",
-    location: "Mumbai, Maharashtra",
+    image: "../../public/Project3.png",
+    location: "Lonavala, Maharashtra",
   },
   {
     title: "Corporate Office Renovation",
-    image: "/assets/projects/office.jpg",
+    image: "../../public/Project6.png",
     location: "Pune, Maharashtra",
   },
   {
     title: "Apartment Complex Build",
-    image: "/assets/projects/apartment.jpg",
+    image: "../../public/Project4.png",
     location: "Thane, Maharashtra",
   },
   {
     title: "Interior Fit-Out",
-    image: "/assets/projects/interior.jpg",
+    image: "../../public/Project5.png",
     location: "Navi Mumbai, Maharashtra",
   },
   {
-    title: "Retail Store Setup",
-    image: "/assets/projects/store.jpg",
-    location: "Bhiwandi, Maharashtra",
+    title: "Bungalow Construction",
+    image: "../../public/Project7.png",
+    location: "Lonavala, Maharashtra",
   },
 ];

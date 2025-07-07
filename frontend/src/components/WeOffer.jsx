@@ -89,7 +89,7 @@ const WeOffer = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.7 }}
         >
-          At Build Strong, we bring your vision to life through creative and functional design. Our team is dedicated to crafting spaces that inspire and elevate everyday experiences.
+          At S.K Reality, we bring your vision to life through creative and functional design. Our team is dedicated to crafting spaces that inspire and elevate everyday experiences.
         </motion.p>
 
         <motion.p

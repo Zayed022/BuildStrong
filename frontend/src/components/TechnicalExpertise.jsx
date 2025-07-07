@@ -48,8 +48,8 @@ const TechnicalExpertise = () => {
       <div className="max-w-7xl mx-auto z-10 relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="uppercase tracking-widest text-xs text-gray-400 mb-2">
-            Build Strong
+          <p className="uppercase tracking-widest text-xl text-gray-400 mb-2">
+            S.K Reality
           </p>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white">
             Technical Expertise

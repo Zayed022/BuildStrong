@@ -43,10 +43,10 @@ const About = () => {
             Who We Are
           </span>
           <h2 className="text-4xl font-extrabold text-blue-700 dark:text-yellow-400 mt-2 mb-4">
-            About BuildStrong
+            About S.K Reality
           </h2>
           <p className="max-w-2xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-            BuildStrong is a next-generation construction firm redefining modern
+            S.K Reality is a next-generation construction firm redefining modern
             infrastructure with bold designs, sustainable practices, and
             cutting-edge technology. Our foundation? Trust, innovation, and a
             passion for excellence.
@@ -80,7 +80,7 @@ const About = () => {
         <div className="mt-20 grid md:grid-cols-2 gap-12 items-start">
           <div className="relative">
             <img
-              src="/about-hero.jpg" // Replace with actual image path
+              src="../../public/SK.png" // Replace with actual image path
               alt="Construction Team"
               className="rounded-xl shadow-md object-cover w-full h-[350px] border border-gray-200 dark:border-gray-800"
             />

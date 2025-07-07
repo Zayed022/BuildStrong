@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "Modern Villa Construction",
-    image: "../../public/Project3.png",
+    image: "/Project3.png",
     location: "Lonavala, Maharashtra",
   },
   {

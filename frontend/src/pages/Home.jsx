@@ -7,6 +7,7 @@ import About from '../components/AboutUs'
 import TechnicalExpertise from '../components/TechnicalExpertise'
 import QA from '../components/QA'
 import FeaturedProjects from '../components/FeaturedProjects'
+import Journey from '../components/Journey'
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <Hero/>
       <WeOffer/>
       <About/>
+      <Journey/>
       <TechnicalExpertise/>
       <FeaturedProjects/>
       <QA/>

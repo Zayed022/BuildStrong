@@ -39,7 +39,7 @@ const Navbar = () => {
   className="flex items-center gap-2 text-2xl font-bold text-blue-700 dark:text-yellow-400 tracking-wide"
 >
   <img
-    src="../../public/SKlogo.png" // ⬅️ Place your logo file inside the public folder
+    src="/SKlogo.png" // ⬅️ Place your logo file inside the public folder
     alt="S.K Reality Logo"
     className="w-8 h-8 object-contain" // Adjust size as needed
   />

@@ -6,7 +6,7 @@ export const featuredProjects = [
     description:
       "A premium residential project located in Lonavala, showcasing a blend of traditional and contemporary architectural excellence.",
     images: [
-      "../../public/Project1.png",
+      "/Project1.png",
       "/projects/baug/1.jpg",
       "/projects/baug/2.jpg",
       "/projects/baug/3.jpg",
@@ -17,7 +17,7 @@ export const featuredProjects = [
     location: "Khandala",
     description: "A modern commercial center with sustainable design features and a bold architectural presence.",
     images: [
-      "../../public/Project2.png",
+      "/Project2.png",
       "/projects/unity/1.jpg",
       "/projects/unity/2.jpg",
     ],

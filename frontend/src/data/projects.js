@@ -6,22 +6,22 @@ export const projects = [
   },
   {
     title: "Corporate Office Renovation",
-    image: "../../public/Project6.png",
+    image: "/Project6.png",
     location: "Pune, Maharashtra",
   },
   {
     title: "Apartment Complex Build",
-    image: "../../public/Project4.png",
+    image: "/Project4.png",
     location: "Thane, Maharashtra",
   },
   {
     title: "Interior Fit-Out",
-    image: "../../public/Project5.png",
+    image: "/Project5.png",
     location: "Navi Mumbai, Maharashtra",
   },
   {
     title: "Bungalow Construction",
-    image: "../../public/Project7.png",
+    image: "/Project7.png",
     location: "Lonavala, Maharashtra",
   },
 ];

@@ -80,7 +80,7 @@ const About = () => {
         <div className="mt-20 grid md:grid-cols-2 gap-12 items-start">
           <div className="relative">
             <img
-              src="../../public/SK.png" // Replace with actual image path
+              src="/SK.png" // Replace with actual image path
               alt="Construction Team"
               className="rounded-xl shadow-md object-cover w-full h-[350px] border border-gray-200 dark:border-gray-800"
             />

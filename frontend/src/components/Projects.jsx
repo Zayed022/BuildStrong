@@ -35,7 +35,8 @@ const Projects = () => {
           variants={fadeIn(1)}
           className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-16"
         >
-          Explore some of our proudest architectural achievements — where craftsmanship, scale, and innovation meet.
+          Explore some of our proudest architectural achievements — where
+          craftsmanship, scale, and innovation meet.
         </motion.p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -58,13 +59,23 @@ const Projects = () => {
                 />
               </div>
 
-              {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+              {/* Hover Overlay (Desktop Only) */}
+              <div className="hidden sm:block">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                <div className="absolute bottom-0 left-0 w-full p-5 bg-black/60 backdrop-blur-sm text-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
+                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <p className="text-sm text-blue-200 uppercase tracking-wider mt-1">
+                    {project.location}
+                  </p>
+                </div>
+              </div>
 
-              {/* Slide-up info */}
-              <div className="absolute bottom-0 left-0 w-full p-5 bg-black/60 backdrop-blur-sm text-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
-                <p className="text-sm text-blue-200 uppercase tracking-wider mt-1">
+              {/* Always Visible Details on Mobile */}
+              <div className="block sm:hidden p-4 bg-white dark:bg-gray-900">
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 uppercase">
                   {project.location}
                 </p>
               </div>

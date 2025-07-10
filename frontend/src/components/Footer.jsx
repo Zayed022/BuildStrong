@@ -44,13 +44,13 @@ const Footer = () => {
           <h4 className="text-xl font-semibold mb-4 text-white">Contact Info</h4>
           <ul className="space-y-3 text-sm text-gray-200">
             <li className="flex items-center justify-center md:justify-start gap-2">
-              <Phone size={18} className="text-yellow-400" /> +91 85302 51422
+              <Phone size={18} className="text-yellow-400" /> +91 11111 11111
             </li>
             <li className="flex items-center justify-center md:justify-start gap-2">
-              <Mail size={18} className="text-yellow-400" /> contact@skreality.com
+              <Mail size={18} className="text-yellow-400" /> contact@xyz.com
             </li>
             <li className="flex items-center justify-center md:justify-start gap-2">
-              <MapPin size={18} className="text-yellow-400" /> Lonavala, Maharashtra
+              <MapPin size={18} className="text-yellow-400" /> XYZ, Maharashtra
             </li>
           </ul>
 

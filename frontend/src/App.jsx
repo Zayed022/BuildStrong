@@ -16,6 +16,7 @@ import WeOffer from "./components/WeOffer";
 import TeamSection from "./components/TeamSection";
 import AboutPage from "./pages/About";
 import TeamPage from "./pages/Team";
+import StickyEnquireButton from "./components/StickyEnquireButton";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
        <Route path="/contact" element={<ContactPage />} />
        <Route path="/teams" element={<TeamPage />} />
        <Route path="/about" element={<AboutPage />} />
+      
     </Routes>
+     <StickyEnquireButton/>
       
     
     </>

@@ -52,7 +52,6 @@ const About = () => {
             passion for excellence.
           </p>
         </div>
-
         {/* Core Cards */}
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
           {cards.map((card, idx) => (
@@ -75,7 +74,6 @@ const About = () => {
             </div>
           ))}
         </div>
-
         {/* Mission + Values */}
         <div className="mt-20 grid md:grid-cols-2 gap-12 items-start">
           <div className="relative">
@@ -106,6 +104,77 @@ const About = () => {
               <li>Certified green practices & smart material sourcing</li>
               <li>Real-time site tracking & digital dashboards</li>
             </ul>
+          </div>
+        </div>
+
+        <div className="mt-20 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { label: "Projects Delivered", value: "120+" },
+            { label: "Happy Clients", value: "80+" },
+            { label: "Cities Served", value: "10+" },
+            { label: "Green Certifications", value: "15+" },
+          ].map((stat, idx) => (
+            <div key={idx}>
+              <h4 className="text-4xl font-bold text-blue-700 dark:text-yellow-400">
+                {stat.value}
+              </h4>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-20">
+          <h4 className="text-xl font-semibold text-center text-gray-700 dark:text-gray-200 mb-6">
+            Trusted by Industry Leaders
+          </h4>
+          <div className="flex flex-wrap justify-center items-center gap-6 opacity-80">
+            {["/Regal.png", "/Gigani.jpeg", "/Tata.png", "/logo4.png"].map(
+              (src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt="Partner Logo"
+                  className="h-10 grayscale hover:grayscale-0 transition"
+                />
+              )
+            )}
+          </div>
+        </div>
+
+        <div className="mt-20 max-w-3xl mx-auto text-center">
+          <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+            A Word from Our Founder
+          </h4>
+          <p className="text-gray-600 dark:text-gray-400 italic">
+            “At S.K Reality, we don't chase trends — we set them. Every brick we
+            lay is a promise: of innovation, sustainability, and lifelong
+            value.”
+          </p>
+          <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+            – Shoyeb Khan, Founder & CEO
+          </p>
+        </div>
+
+        <div className="mt-20">
+          <h4 className="text-xl font-semibold text-center text-gray-800 dark:text-white mb-6">
+            Technology That Powers Us
+          </h4>
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              "AI-Driven Design Simulation",
+              "Real-Time Site Monitoring",
+              "Smart Procurement Systems",
+              "Digital Twin Architecture",
+            ].map((tech, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-100 dark:bg-gray-800 rounded-xl p-4 shadow-sm text-gray-700 dark:text-gray-200"
+              >
+                {tech}
+              </div>
+            ))}
           </div>
         </div>
       </div>

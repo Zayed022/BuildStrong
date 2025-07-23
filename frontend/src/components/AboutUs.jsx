@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Landmark,
   Lightbulb,
@@ -6,6 +6,7 @@ import {
   Recycle,
   Building2,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const cards = [
   {
@@ -30,15 +31,39 @@ const cards = [
   },
 ];
 
+const stats = [
+  { label: "Projects Delivered", value: 120 },
+  { label: "Happy Clients", value: 80 },
+  { label: "Cities Served", value: 10 },
+  { label: "Green Certifications", value: 15 },
+];
+
 const About = () => {
+  useEffect(() => {
+    // Tawk.to script injection (if needed)
+    const script = document.createElement("script");
+    script.src = "https://embed.tawk.to/687e6adc0c2df81912a84c2c/1j0mt2rkg";
+    script.async = true;
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+    document.body.appendChild(script);
+    return () => document.body.removeChild(script);
+  }, []);
+
   return (
     <section
       id="about"
-      className="bg-white dark:bg-gray-950 py-24 px-6 md:px-10 transition-colors duration-300"
+      className="bg-white dark:bg-gray-950 py-24 px-6 md:px-12 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <div className="text-center mb-16">
+        {/* Heading */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <span className="text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400">
             Who We Are
           </span>
@@ -46,18 +71,22 @@ const About = () => {
             About S.K Reality
           </h2>
           <p className="max-w-2xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-            S.K Reality is a next-generation construction firm redefining modern
-            infrastructure with bold designs, sustainable practices, and
-            cutting-edge technology. Our foundation? Trust, innovation, and a
-            passion for excellence.
+            S.K Reality is redefining modern infrastructure with bold design,
+            sustainable innovation, and future-ready technology. We don’t just
+            construct — we craft legacies.
           </p>
-        </div>
-        {/* Core Cards */}
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+        </motion.div>
+
+        {/* Cards */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map((card, idx) => (
-            <div
+            <motion.div
               key={idx}
               className="group relative bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm rounded-2xl p-6 overflow-hidden transition hover:shadow-xl hover:border-blue-500 dark:hover:border-yellow-400"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              viewport={{ once: true }}
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-gray-100 dark:bg-gray-800 rounded-full">
@@ -71,14 +100,21 @@ const About = () => {
                 {card.text}
               </p>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 dark:from-yellow-400 dark:to-pink-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-            </div>
+            </motion.div>
           ))}
         </div>
-        {/* Mission + Values */}
+
+        {/* Mission */}
         <div className="mt-20 grid md:grid-cols-2 gap-12 items-start">
-          <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
             <img
-              src="/SK.png" // Replace with actual image path
+              src="/SK.png"
               alt="Construction Team"
               className="rounded-xl shadow-md object-cover w-full h-[350px] border border-gray-200 dark:border-gray-800"
             />
@@ -86,7 +122,7 @@ const About = () => {
               <Landmark className="inline-block w-4 h-4 mr-1" />
               10+ Years of Global Excellence
             </div>
-          </div>
+          </motion.div>
 
           <div>
             <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
@@ -95,8 +131,7 @@ const About = () => {
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               We don’t just build. We engineer experiences. From luxury
               residences to public infrastructure, our mission is to craft
-              structures that endure — both physically and emotionally. Our
-              legacy is built on innovation, trust, and unwavering quality.
+              structures that endure — both physically and emotionally.
             </p>
             <ul className="grid gap-2 text-sm text-gray-700 dark:text-gray-300 list-disc list-inside">
               <li>Client-centric planning & transparent communication</li>
@@ -107,30 +142,31 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { label: "Projects Delivered", value: "120+" },
-            { label: "Happy Clients", value: "80+" },
-            { label: "Cities Served", value: "10+" },
-            { label: "Green Certifications", value: "15+" },
-          ].map((stat, idx) => (
-            <div key={idx}>
-              <h4 className="text-4xl font-bold text-blue-700 dark:text-yellow-400">
-                {stat.value}
-              </h4>
+        {/* Stats */}
+        <motion.div
+          className="mt-20 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ staggerChildren: 0.1 }}
+          viewport={{ once: true }}
+        >
+          {stats.map((stat, idx) => (
+            <motion.div key={idx} className="text-blue-700 dark:text-yellow-400">
+              <h4 className="text-4xl font-bold">{stat.value}+</h4>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
                 {stat.label}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
+        {/* Logos */}
         <div className="mt-20">
           <h4 className="text-xl font-semibold text-center text-gray-700 dark:text-gray-200 mb-6">
             Trusted by Industry Leaders
           </h4>
           <div className="flex flex-wrap justify-center items-center gap-6 opacity-80">
-            {["/Regal.png", "/Gigani.jpeg", "/Tata.png", "/logo4.png"].map(
+            {["/Regal.png", "/Gigani.jpeg", "/Tata.png"].map(
               (src, i) => (
                 <img
                   key={i}
@@ -143,6 +179,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Founder */}
         <div className="mt-20 max-w-3xl mx-auto text-center">
           <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
             A Word from Our Founder
@@ -157,6 +194,7 @@ const About = () => {
           </p>
         </div>
 
+        {/* Technologies */}
         <div className="mt-20">
           <h4 className="text-xl font-semibold text-center text-gray-800 dark:text-white mb-6">
             Technology That Powers Us

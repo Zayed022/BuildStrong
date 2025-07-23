@@ -35,7 +35,6 @@ const Footer = () => {
           <ul className="space-y-3 text-sm text-gray-300">
             {[
               { label: "Home", href: "/" },
-              { label: "Team", href: "/teams" },
               { label: "About", href: "/about" },
               { label: "Services", href: "/services" },
               { label: "Projects", href: "/projects" },
@@ -61,11 +60,11 @@ const Footer = () => {
           <ul className="space-y-3 text-sm text-gray-300">
             <li className="flex items-center gap-2">
               <Phone size={18} className="text-yellow-400" />
-              +91 08530 251422
+              +91 85302 51422
             </li>
             <li className="flex items-center gap-2">
               <Mail size={18} className="text-yellow-400" />
-              contact@skreality.com
+              skrealityconstruction@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <MapPin size={18} className="text-yellow-400" />

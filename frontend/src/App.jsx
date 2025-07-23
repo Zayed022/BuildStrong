@@ -17,6 +17,7 @@ import TeamSection from "./components/TeamSection";
 import AboutPage from "./pages/About";
 import TeamPage from "./pages/Team";
 import StickyEnquireButton from "./components/StickyEnquireButton";
+import LiveChat from "./components/LiveChat";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       
     </Routes>
      <StickyEnquireButton/>
+     <LiveChat/>
       
     
     </>

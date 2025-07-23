@@ -42,7 +42,7 @@ const Contact = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeIn(2)}
-          action="https://formspree.io/f/mqabobjr"
+          action="https://formspree.io/f/mblkggjl"
           method="POST"
           className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 text-left space-y-6"
         >

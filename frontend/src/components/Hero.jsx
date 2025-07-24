@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const heroScreens = [
@@ -31,63 +31,89 @@ const fadeVariant = {
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   const navigate = useNavigate();
+  const intervalRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % heroScreens.length);
-    }, 6000);
-    return () => clearInterval(interval);
+    const loadImages = async () => {
+      const promises = heroScreens.map((screen) => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = screen.image;
+          img.onload = resolve;
+        });
+      });
+
+      await Promise.all(promises);
+      setImagesLoaded(true);
+    };
+
+    loadImages();
   }, []);
 
-  const currentScreen = heroScreens[index];
+  useEffect(() => {
+    if (imagesLoaded) {
+      intervalRef.current = setInterval(() => {
+        setIndex((prev) => (prev + 1) % heroScreens.length);
+      }, 6000);
+    }
+
+    return () => clearInterval(intervalRef.current);
+  }, [imagesLoaded]);
+
+  if (!imagesLoaded) {
+    return (
+      <section className="w-full h-screen bg-black flex items-center justify-center text-white">
+        <p>Loading...</p>
+      </section>
+    );
+  }
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-  {/* Background Image */}
-  <motion.img
-    key={`bg-${index}`}
-    src={currentScreen.image}
-    alt={currentScreen.title}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700"
-  />
+      {/* Preloaded & layered background images */}
+      {heroScreens.map((screen, i) => (
+        <img
+          key={i}
+          src={screen.image}
+          alt={screen.title}
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
+            i === index ? "opacity-100 z-0" : "opacity-0 z-0"
+          }`}
+        />
+      ))}
 
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/50 z-10" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/50 z-10" />
 
-  {/* Centered Content */}
-  <div className="relative z-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-16 h-full text-center text-white">
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={index}
-        variants={fadeVariant}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        className="space-y-6 max-w-3xl"
-      >
-        <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-          {currentScreen.title}
-        </h2>
-        <p className="text-lg md:text-xl text-gray-200">
-          {currentScreen.subtitle}
-        </p>
-        <motion.button
-          onClick={() => navigate("/projects")}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-6 px-8 py-3 text-white font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg shadow-lg transition-all"
+      {/* Text Content */}
+      <div className="relative z-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-16 h-full text-center text-white">
+        <motion.div
+          key={index}
+          variants={fadeVariant}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="space-y-6 max-w-3xl"
         >
-          Explore Our Work
-        </motion.button>
-      </motion.div>
-    </AnimatePresence>
-  </div>
-</section>
-
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight">
+            {heroScreens[index].title}
+          </h2>
+          <p className="text-lg md:text-xl text-gray-200">
+            {heroScreens[index].subtitle}
+          </p>
+          <motion.button
+            onClick={() => navigate("/projects")}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-6 px-8 py-3 text-white font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg shadow-lg transition-all"
+          >
+            Explore Our Work
+          </motion.button>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

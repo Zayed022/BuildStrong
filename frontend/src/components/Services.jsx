@@ -23,9 +23,34 @@ const services = [
     icon: Hammer,
   },
   {
+    title: "RCC Construction",
+    description: ` From villa basements to multi-storey commercial structures, we specialize in Reinforced Cement Concrete (RCC) execution using high-grade materials and latest formwork systems.
+✔ Column-Beam-Slab frameworks
+✔ Podium slabs, raft foundations, retaining walls
+✔ High-load structures with structural vetting.`,
+    icon: Building,
+  },
+  {
+    title: "Brickwork & Blockwork",
+    description: ` We offer precise and plumb masonry—AAC blocks, red bricks, fly-ash blocks—ensuring thermal comfort, structural integrity, and clean finishes.
+✔ Load-bearing & partition walls
+✔ Weather protection techniques
+✔ Vertical alignment and joint quality control.`,
+    icon: Building,
+  },
+
+  {
     title: "Project Planning & Management",
     description: `Our pre-construction planning includes site evaluation, budgeting, scheduling, and permit handling. We use Gantt charts and agile techniques to track progress and optimize workflow. You'll get complete transparency through real-time updates, milestone reports, and a dedicated project manager.`,
     icon: Ruler,
+  },
+  {
+    title: "Waterproofing Solutions",
+    description: ` We are known for our technical waterproofing expertise—working on podiums, basements, terraces, washrooms, and water tanks using a multi-system approach:
+✔ Membrane, injection grouting, PU coating, crystalline systems
+✔ Site-specific treatment plans backed by inspection reports
+✔ Leak-proof guarantee with material warranties.`,
+    icon: Building,
   },
   {
     title: "Safety & Regulatory Compliance",
@@ -33,15 +58,50 @@ const services = [
     icon: HardHat,
   },
   {
+    title: "Architectural & Structural Drawings",
+    description: `We assist in converting your ideas into approved, buildable plans:
+✔ Concept + working architectural layouts
+✔ RCC structural drawings with bar bending schedules
+✔ Integration with MEP & civil details.`,
+    icon: Ruler,
+  },
+  {
+    title: " Interior Works",
+    description: `We convert civil structures into refined living or workspaces:
+✔ POP, gypsum, and paneling
+✔ Modular kitchens, wardrobes, false ceilings
+✔ Lighting, paint, veneer/PU finishes.`,
+    icon: PaintRoller,
+  },
+  {
+    title: " Sanctioning & Compliance",
+    description: `Navigating permissions made easy:
+✔ Liaisoning with local authorities
+✔ Building plan approvals, fire NOC, drainage, environmental clearance
+✔ Working in sync with architects and legal consultants.`,
+    icon: HardHat,
+  },
+
+  {
     title: "Painting, Finishing & Interiors",
     description: `Enhance the final look of your project with our finishing services: custom painting, textures, waterproofing, wood polish, false ceilings, lighting, and decor. Our interior team works closely with designers to match function with aesthetics.`,
     icon: PaintRoller,
   },
   {
+    title: "Project Management Consultancy (PMC)",
+    description: `For clients seeking control, transparency & technical oversight:
+✔ Budgeting, contractor management, timeline control
+✔ Quality audits, milestone tracking, and reporting
+✔ Vendor management & material reconciliation.`,
+    icon: Wrench,
+  },
+
+  {
     title: "Post-Construction Maintenance",
     description: `We don't walk away after handover. Our maintenance team provides ongoing support including plumbing, electrical, HVAC, waterproofing, and emergency repairs. You also get optional AMC packages tailored to your property needs.`,
     icon: Wrench,
   },
+
 ];
 
 const fadeInUp = (i) => ({

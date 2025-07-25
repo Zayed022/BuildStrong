@@ -14,7 +14,7 @@ function AboutPage() {
       "@type": "Organization",
       "name": "S.K Reality Construction",
       "url": "https://skrealityconstruction.com",
-      "logo": "SKlogo.png", // Replace with real logo URL
+      "logo": "/SKlogo.png", // Replace with real logo URL
       "description": "S.K Reality Construction is a leading construction firm specializing in residential, commercial, and interior works in India.",
       "founder": {
         "@type": "Person",
@@ -22,14 +22,14 @@ function AboutPage() {
       },
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "City",
+        "addressLocality": "Lonavala",
         "addressRegion": "Maharashtra",
         "postalCode": "XXXXXX",
         "addressCountry": "IN"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+91-XXXXXXXXXX",
+        "telephone": "+91-85302 51422",
         "contactType": "Customer Support"
       }
     }

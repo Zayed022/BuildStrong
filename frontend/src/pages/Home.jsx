@@ -31,7 +31,7 @@ function Home() {
     "logo": "https://skrealityconstruction.com/logo.png", // Replace with actual logo URL
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-XXXXXXXXXX",
+      "telephone": "+91-85302 51422",
       "contactType": "Customer Support",
       "areaServed": "IN"
     },

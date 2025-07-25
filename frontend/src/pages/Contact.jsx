@@ -16,7 +16,7 @@ function ContactPage() {
       "url": "https://skrealityconstruction.com",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+91-XXXXXXXXXX",  // Replace with your actual number
+        "telephone": "+91-85302 51422",  // Replace with your actual number
         "contactType": "Customer Support",
         "areaServed": "IN",
         "availableLanguage": ["English", "Hindi", "Marathi"]

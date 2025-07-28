@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../data/projects";
 
@@ -20,11 +20,21 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [fullscreenImage, setFullscreenImage] = useState(null);
 
+  useEffect(() => {
+  if (fullscreenImage) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+}, [fullscreenImage]);
+
+
   return (
     <section
-      id="projects"
-      className="py-24 px-6 bg-white dark:bg-gray-950 text-gray-900 dark:text-white relative z-10"
-    >
+  id="projects"
+  className="pt-32 pb-24 px-6 bg-white dark:bg-gray-950 text-gray-900 dark:text-white relative z-10 scroll-mt-32"
+>
+
       <div className="max-w-7xl mx-auto text-center mb-16">
         <motion.h2
           initial="hidden"
@@ -116,7 +126,7 @@ const Projects = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 50 }}
             >
-              <div className="bg-white dark:bg-gray-900 p-8 w-full max-w-5xl rounded-2xl shadow-2xl relative overflow-y-auto max-h-[95vh]">
+              <div className="bg-white dark:bg-gray-900 p-8 w-full max-w-5xl rounded-2xl shadow-2xl relative overflow-y-auto max-h-[95vh] mt-16">
                 <button
                   onClick={() => setSelectedProject(null)}
                   className="absolute top-4 right-6 text-gray-400 hover:text-red-500 text-2xl"
@@ -160,7 +170,7 @@ const Projects = () => {
       <AnimatePresence>
         {fullscreenImage && (
           <motion.div
-            className="fixed inset-0 bg-black/90 flex items-center justify-center z-[999]"
+            className="fixed inset-0 bg-black/90 flex items-center justify-center z-[9999] "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

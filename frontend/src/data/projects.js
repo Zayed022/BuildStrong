@@ -42,7 +42,7 @@ export const projects = [
   {
     title: "Apartment Complex Build",
     image: "/Project4.png",
-    location: "Thane, Maharashtra",
+    location: "Lonavala, Maharashtra",
     status:"Completed",
     description:
       "A mid-rise residential community developed with modern urban living in mind—featuring secure gated access, rooftop amenities, and energy-efficient systems.",

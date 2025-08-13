@@ -43,7 +43,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
-    <body>
+   <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 
@@ -51,7 +51,8 @@
   <a href="https://wa.me/+918530251422?text=Hello%20I%20am%20interested%20in%20your%20services"
      target="_blank"
      class="whatsapp-btn">
-    💬 Chat with us
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+    Chat with us
   </a>
 
   <style>
@@ -79,12 +80,21 @@
       background-color: #1ebc57;
     }
 
+    .whatsapp-icon {
+      width: 20px;
+      height: 20px;
+    }
+
     /* ✅ Tablet View */
     @media (max-width: 768px) {
       .whatsapp-btn {
         padding: 12px 20px;
         font-size: 14px;
         gap: 6px;
+      }
+      .whatsapp-icon {
+        width: 18px;
+        height: 18px;
       }
     }
 
@@ -99,13 +109,14 @@
         justify-content: center;
         gap: 0;
       }
-      .whatsapp-btn::before {
-        content: "💬";
-        font-size: 22px;
+      .whatsapp-btn img {
+        width: 24px;
+        height: 24px;
       }
     }
   </style>
 </body>
+
 
 
 </html>

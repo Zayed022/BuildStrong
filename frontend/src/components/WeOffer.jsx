@@ -16,9 +16,9 @@ const services = [
     description:
       "From villa basements to multi-storey commercial buildings, we specialize in RCC works using high-grade materials and modern formwork systems.",
     bullets: [
-      "✔ Column-Beam-Slab frameworks",
-      "✔ Podium slabs, raft foundations, retaining walls",
-      "✔ High-load structures with structural vetting",
+      " Column-Beam-Slab frameworks",
+      " Podium slabs, raft foundations, retaining walls",
+      " High-load structures with structural vetting",
     ],
     gradient: "from-gray-700 via-gray-900 to-black",
   },
@@ -27,9 +27,9 @@ const services = [
     description:
       "Precise masonry using AAC blocks, red bricks, and fly-ash blocks for strength, insulation, and finish quality.",
     bullets: [
-      "✔ Load-bearing & partition walls",
-      "✔ Weather protection techniques",
-      "✔ Vertical alignment and joint control",
+      " Load-bearing & partition walls",
+      " Weather protection techniques",
+      " Vertical alignment and joint control",
     ],
     gradient: "from-yellow-500 via-orange-600 to-red-500",
   },
@@ -38,9 +38,9 @@ const services = [
     description:
       "Multi-system waterproofing for podiums, basements, terraces, and tanks with a leak-proof guarantee.",
     bullets: [
-      "✔ PU coating, injection grouting, membranes",
-      "✔ Site-specific plans with inspection reports",
-      "✔ Material warranties included",
+      " PU coating, injection grouting, membranes",
+      " Site-specific plans with inspection reports",
+      " Material warranties included",
     ],
     gradient: "from-blue-600 via-indigo-600 to-purple-600",
   },
@@ -49,9 +49,9 @@ const services = [
     description:
       "End-to-end technical drawings for approval and execution.",
     bullets: [
-      "✔ Concept + working plans",
-      "✔ RCC drawings with bar bending schedules",
-      "✔ Integrated MEP & civil detailing",
+      " Concept + working plans",
+      " RCC drawings with bar bending schedules",
+      " Integrated MEP & civil detailing",
     ],
     gradient: "from-pink-500 via-purple-500 to-indigo-500",
   },
@@ -60,9 +60,9 @@ const services = [
     description:
       "We handle government approvals and compliance with ease.",
     bullets: [
-      "✔ Liaisoning with authorities",
-      "✔ Fire NOC, drainage & environmental clearances",
-      "✔ Legal sync with architects",
+      " Liaisoning with authorities",
+      " Fire NOC, drainage & environmental clearances",
+      " Legal sync with architects",
     ],
     gradient: "from-green-400 via-teal-500 to-emerald-500",
   },
@@ -71,9 +71,9 @@ const services = [
     description:
       "Gain control over quality, budget, and timelines with our PMC expertise.",
     bullets: [
-      "✔ Budgeting, contractor & timeline control",
-      "✔ Audits, milestone tracking, reporting",
-      "✔ Vendor and material reconciliation",
+      " Budgeting, contractor & timeline control",
+      " Audits, milestone tracking, reporting",
+      " Vendor and material reconciliation",
     ],
     gradient: "from-red-500 via-amber-500 to-yellow-500",
   },
@@ -82,9 +82,9 @@ const services = [
     description:
       "Functional, elegant interiors delivered with turnkey execution.",
     bullets: [
-      "✔ POP, paneling, and gypsum work",
-      "✔ Modular kitchens, wardrobes, false ceilings",
-      "✔ Premium paint, veneer, PU finishes",
+      " POP, paneling, and gypsum work",
+      " Modular kitchens, wardrobes, false ceilings",
+      " Premium paint, veneer, PU finishes",
     ],
     gradient: "from-purple-600 via-fuchsia-600 to-pink-600",
   },
